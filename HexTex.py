@@ -1,9 +1,12 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-## Simple Script For Hex The Text OR tex The Hex :)
+
+## Script: HexTex
+## Job: Encode/Decode: encodeing From Hex To Text || Decoding From Hex To Text :)
 ## By: Oseid Aldary
 
 ## Liabraries ##
+
 from time import sleep as se
 from os import system as sy
 from random import choice as cho
@@ -60,7 +63,9 @@ def HexTex():
      se(0.10)
      print(" ")
      ch = raw_input(rd+"["+bl+"HexTex"+rd+"]"+cy+" ==> "+rd)
-     while ch =="" or ch is None:
+     while ch =="" or ch is None or ch not in '12345':
+      if ch not in "12345":
+		print("\033[1;33m[\033[1;31m!\033[1;33m][ERROR]\033[1;33m Of Your Choice[\033[1;31m{}\033[1;33m] Is Not In Menu\033[1;31m!!".format(ch))
       ch = raw_input("\033[31m[!]"+bl+"Enter Your Choice"+yl+"?"+cy+" ==> "+rd)
 
      if ch =="1":
