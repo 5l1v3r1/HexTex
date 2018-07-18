@@ -63,8 +63,8 @@ def HexTex():
      se(0.10)
      print(" ")
      ch = raw_input(rd+"["+bl+"HexTex"+rd+"]"+cy+" ==> "+rd)
-     while ch =="" or ch is None or ch not in '12345':
-      if ch not in "12345":
+     while ch =="" or ch is None or ch not in ['1','2','3','4','5']:
+      if ch not in ['1','2','3','4','5']:
 		print("\033[1;33m[\033[1;31m!\033[1;33m][ERROR]\033[1;33m Of Your Choice[\033[1;31m{}\033[1;33m] Is Not In Menu\033[1;31m!!".format(ch))
       ch = raw_input("\033[31m[!]"+bl+"Enter Your Choice"+yl+"?"+cy+" ==> "+rd)
 
