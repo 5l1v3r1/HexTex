@@ -11,19 +11,31 @@ from time import sleep as se
 from os import system as sy
 from random import choice as cho
 from datetime import datetime
+from sys import platform as useros
 
-###Colors###########
-wi = "\033[1;37m" ##>>White
-rd = "\033[1;31m" ##>Red
-gr = "\033[1;32m" ##>Green
-yl = "\033[1;33m" ##>Yallow
-bl = "\033[1;34m" ##>Blou
-pu = "\033[1;35m" ##>Purple
-cy = "\033[1;36m" ##>Cyan
-####################
-
+if useros =="linux" or useros =="linux2":
+####Colors Linux###########
+ wi = "\033[1;37m" ##>>White
+ rd = "\033[1;31m" ##>Red
+ gr = "\033[1;32m" ##>Green
+ yl = "\033[1;33m" ##>Yallow
+ bl = "\033[1;34m" ##>Blou
+ pu = "\033[1;35m" ##>Purple
+ cy = "\033[1;36m" ##>Cyan
+#####################
+else:
+##No Colors##
+ wi = ""   ##
+ rd = ""   ##
+ gr = ""   ##
+ yl = ""   ##
+ bl = ""   ##
+ pu = ""   ##
+ cy = ""   ##
+#############
+  
 ## Random Say
-say = ["\033[1;31mGoodBye","\033[1;31mSee You Later","\033[1;31m Have A Nice Day"]
+say = ["GoodBye", "See You Later", "Have A Nice Day"]
 randsay = cho(say)
 
 ## Show Time
@@ -37,7 +49,7 @@ timenow = "{}:{}:{}".format(hour,minute,second)
 def HexTex():
 
   try:
-     sy("clear")
+     sy("cls || clear")
      se(0.10)
      print(bl+"["+rd+"---"+bl+"]"+wi+" SCRIPT: "+rd+"[HexTex]"+bl+"                       ["+rd+"---"+bl+"]")
      print(bl+"["+rd+"---"+bl+"]"+wi+" Job: "+gr+"[ Text to Hex | Hex to Text ]"+bl+"     ["+rd+"---"+bl+"]")
@@ -64,9 +76,10 @@ def HexTex():
      print(" ")
      ch = raw_input(rd+"["+bl+"HexTex"+rd+"]"+cy+" ==> "+rd)
      while ch =="" or ch is None or ch not in ['1','2','3','4','5']:
-      if ch not in ['1','2','3','4','5']:
-		print("\033[1;33m[\033[1;31m!\033[1;33m][ERROR]\033[1;33m Of Your Choice[\033[1;31m{}\033[1;33m] Is Not In Menu\033[1;31m!!".format(ch))
-      ch = raw_input("\033[31m[!]"+bl+"Enter Your Choice"+yl+"?"+cy+" ==> "+rd)
+      if ch !="":
+	if ch not in ['1','2','3','4','5']:
+		print(yl+"["+rd+"!"+yl+"][ERROR] Of Your Choice["+rd+ch+yl+"] Is Not In Menu"+rd+"!!!")
+      ch = raw_input(rd+"[!]"+bl+"Enter Your Choice"+yl+"?"+cy+" ==> "+rd)
 
      if ch =="1":
 	se(0.10)
@@ -93,7 +106,7 @@ def HexTex():
         try:
            text = hex.decode('hex','strict')
         except:
-              print("\033[1;31m[\033[1;33m!\033[1;31m][\033[1;33mERROR\033[1;31m]\033[1;33m This[\033[31m{}\033[1;33m] Is Not A Hex Code\033[1;31m !!!".format(hex.strip()))
+              print(rd+"["+yl+"!"+rd+"]["+yl+"ERROR"+rd+"]"+yl+" This["+rd+hex.strip()+yl+"] Is Not A Hex Code"+rd+" !!!")
 	      exit(1)
         print(" ")
         print(cy+"[H]"+pu+" Hex=[ "+yl+str(hex)+pu+" ] Text=[ "+yl+str(text)+pu+" ]...."+rd+"Done"+gr+" :)")
@@ -126,7 +139,7 @@ def HexTex():
 	     print(bl+"["+str(loop)+"]"+pu+" Encode"+yl+"["+str(T).strip()+"]"+rd+" Hex:"+cy+" ==> "+gr+str(H))
 	     loop +=1
 	     se(.1)
-	 print("\n\033[1;37m-------------------------------\n"+gr+"[*]"+yl+" Shutdown At:[ "+bl+timenow+yl+" ]")
+	 print(wi+"\n-------------------------------\n"+gr+"[*]"+yl+" Shutdown At:[ "+bl+timenow+yl+" ]")
 	 print(yl+"[*]"+rd+" Done! "+gr+":)")
 
      elif ch =="4":
@@ -156,23 +169,22 @@ def HexTex():
             try:
 	       T = ' '.join([x.decode('hex') for x in h.split()])
             except:
-                  T = "\033[1;31m[\033[1;33m!\033[1;31m][\033[1;33mERROR\033[1;31m]\033[1;33m This[\033[31m{}\033[1;33m] Is Not A Hex Code\033[1;31m !!!\n".format(h.strip())
+                  T = rd+"["+yl+"!"+rd+"]["+yl+"ERROR"+rd+"]"+yl+" This["+rd+h.strip()+yl+"] Is Not A Hex Code"+rd+"!!!\n"
 	    print(bl+"["+str(loop)+"]"+pu+" Decode"+yl+"["+str(h).strip()+"]"+rd+" Text:"+cy+" ==> "+gr+str(T))
 	    loop +=1
 	    se(.1)
-	 print("\n\033[1;37m-------------------------------\n"+gr+"[*]"+yl+" Shutdown At:[ "+bl+timenow+yl+" ]")
+	 print(wi+"\n-------------------------------\n"+gr+"[*]"+yl+" Shutdown At:[ "+bl+timenow+yl+" ]")
 	 print(yl+"[*]"+rd+" Done! "+gr+":)")
 
      elif ch =="5":
-	print("\n\n\033[31m[E]\033[1;33m Exiting\033[1;31m....\n")
+	print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
 	se(1.5)
-	print("\033[1;32m[*] "+randsay+"\033[1;32m :)\033[1;0m\n")
+	print(gr+"[*] "+rd+randsay+gr+":)\n"+wi)
 
   except KeyboardInterrupt:
-	print("\n\n\033[31m[E]\033[1;33m Exiting\033[1;31m....\n")
-        se(1.5)
-        print("\033[1;32m[*] "+randsay+"\033[1;32m :)\033[1;0m\n")
-
+	print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
+	se(1.5)
+	print(gr+"[*] "+rd+randsay+gr+":)\n"+wi)
 ## HexTex Function Done !:)
 
 ## Run HexTex Function
