@@ -54,7 +54,7 @@ def HexTex():
      print(bl+"["+rd+"---"+bl+"]"+wi+" SCRIPT: "+rd+"[HexTex]"+bl+"                       ["+rd+"---"+bl+"]")
      print(bl+"["+rd+"---"+bl+"]"+wi+" Job: "+gr+"[ Text to Hex | Hex to Text ]"+bl+"     ["+rd+"---"+bl+"]")
      print(bl+"["+rd+"---"+bl+"]"+wi+" CodedBy: "+gr+"OseidAldary.                 "+bl+" ["+rd+"---"+bl+"]")
-     print(yl+"[\033[1;37m------------------------------------------------"+yl+"]")
+     print(yl+"["+wi+"------------------------------------------------"+yl+"]")
      print(bl+"["+rd+"---"+bl+"]"+"               ["+rd+"Welcome"+bl+"]                ["+rd+"---"+bl+"]")
 
      se(0.10)
