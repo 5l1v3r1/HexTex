@@ -93,7 +93,15 @@ def HexTex():
 	hext = text.encode('hex','strict')
 	print(" ")
 	print(cy+"[T]"+pu+" Text=[ "+yl+str(text)+pu+" ] Hex=[ "+yl+str(hext)+pu+" ]...."+rd+"Done"+gr+" :)")
-
+	bs = raw_input(gr+"\n["+wi+"b"+gr+"]"+wi+"ack "+gr+"["+wi+"e"+gr+"]"+wi+"xit "+cy+"==> "+gr)
+	while bs =="" or bs not in ['b','B','back','Back','BACK','e','E','exit','Exit','EXIT']:
+	    bs = raw_input(gr+"["+wi+"b"+gr+"]"+wi+"ack"+gr+" ["+wi+"e"+gr+"]"+wi+"xit "+yl+"==>"+rd+"? "+gr)
+	if bs in ['b','B','back','Back','BACK']:
+            sy("clear && python HexTex.py")
+	else:
+            print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
+            se(1.5)
+            print(gr+"[*] "+rd+randsay+gr+":)\n"+wi)
      elif ch =="2":
         se(0.10)
         hex = raw_input(rd+"[H]["+pu+"HexCode"+rd+"]"+cy+" ==> "+rd)
@@ -110,6 +118,15 @@ def HexTex():
 	      exit(1)
         print(" ")
         print(cy+"[H]"+pu+" Hex=[ "+yl+str(hex)+pu+" ] Text=[ "+yl+str(text)+pu+" ]...."+rd+"Done"+gr+" :)")
+        bs = raw_input(gr+"\n["+wi+"b"+gr+"]"+wi+"ack "+gr+"["+wi+"e"+gr+"]"+wi+"xit "+cy+"==> "+gr)
+        while bs =="" or bs not in ['b','B','back','Back','BACK','e','E','exit','Exit','EXIT']:
+            bs = raw_input(gr+"["+wi+"b"+gr+"]"+wi+"ack"+gr+" ["+wi+"e"+gr+"]"+wi+"xit "+yl+"==>"+rd+"? "+gr)
+        if bs in ['b','B','back','Back','BACK']:
+            sy("clear && python HexTex.py")
+        else:
+            print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
+            se(1.5)
+            print(gr+"[*] "+rd+randsay+gr+":)\n"+wi)
 
      elif ch =="3":
 	 se(0.10)
@@ -141,6 +158,15 @@ def HexTex():
 	     se(.1)
 	 print(wi+"\n-------------------------------\n"+gr+"[*]"+yl+" Shutdown At:[ "+bl+timenow+yl+" ]")
 	 print(yl+"[*]"+rd+" Done! "+gr+":)")
+         bs = raw_input(gr+"\n["+wi+"b"+gr+"]"+wi+"ack "+gr+"["+wi+"e"+gr+"]"+wi+"xit "+cy+"==> "+gr)
+         while bs =="" or bs not in ['b','B','back','Back','BACK','e','E','exit','Exit','EXIT']:
+             bs = raw_input(gr+"["+wi+"b"+gr+"]"+wi+"ack"+gr+" ["+wi+"e"+gr+"]"+wi+"xit "+yl+"==>"+rd+"? "+gr)
+         if bs in ['b','B','back','Back','BACK']:
+            sy("clear && python HexTex.py")
+         else:
+            print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
+            se(1.5)
+            print(gr+"[*] "+rd+randsay+gr+":)\n"+wi)
 
      elif ch =="4":
 	 se(0.10)
@@ -175,6 +201,15 @@ def HexTex():
 	    se(.1)
 	 print(wi+"\n-------------------------------\n"+gr+"[*]"+yl+" Shutdown At:[ "+bl+timenow+yl+" ]")
 	 print(yl+"[*]"+rd+" Done! "+gr+":)")
+         bs = raw_input(gr+"\n["+wi+"b"+gr+"]"+wi+"ack "+gr+"["+wi+"e"+gr+"]"+wi+"xit "+cy+"==> "+gr)
+         while bs =="" or bs not in ['b','B','back','Back','BACK','e','E','exit','Exit','EXIT']:
+             bs = raw_input(gr+"["+wi+"b"+gr+"]"+wi+"ack"+gr+" ["+wi+"e"+gr+"]"+wi+"xit "+yl+"==>"+rd+"? "+gr)
+         if bs in ['b','B','back','Back','BACK']:
+            sy("clear && python HexTex.py")
+         else:
+            print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
+            se(1.5)
+            print(gr+"[*] "+rd+randsay+gr+":)\n"+wi)
 
      elif ch =="5":
 	print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
