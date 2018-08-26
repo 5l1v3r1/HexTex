@@ -220,10 +220,13 @@ def HexTex():
 	print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
 	se(1.5)
 	print(gr+"[*] "+rd+randsay+gr+":)\n"+wi)
+
 ## HexTex Function Done !:)
 
 ## Run HexTex Function
+
 HexTex()
+
 #####################################
 ## End Of File ######################
 ## This Script By Oseid Aldary ######
