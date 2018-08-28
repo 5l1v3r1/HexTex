@@ -97,7 +97,7 @@ def HexTex():
 	while bs =="" or bs not in ['b','B','back','Back','BACK','e','E','exit','Exit','EXIT']:
 	    bs = raw_input(gr+"["+wi+"b"+gr+"]"+wi+"ack"+gr+" ["+wi+"e"+gr+"]"+wi+"xit "+yl+"==>"+rd+"? "+gr)
 	if bs in ['b','B','back','Back','BACK']:
-            sy("clear && python HexTex.py")
+            sy("cls && python HexTex.py || clear && python HexTex.py")
 	else:
             print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
             se(1.5)
@@ -122,7 +122,7 @@ def HexTex():
         while bs =="" or bs not in ['b','B','back','Back','BACK','e','E','exit','Exit','EXIT']:
             bs = raw_input(gr+"["+wi+"b"+gr+"]"+wi+"ack"+gr+" ["+wi+"e"+gr+"]"+wi+"xit "+yl+"==>"+rd+"? "+gr)
         if bs in ['b','B','back','Back','BACK']:
-            sy("clear && python HexTex.py")
+            sy("cls && python HexTex.py || clear && python HexTex.py")
         else:
             print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
             se(1.5)
@@ -162,7 +162,7 @@ def HexTex():
          while bs =="" or bs not in ['b','B','back','Back','BACK','e','E','exit','Exit','EXIT']:
              bs = raw_input(gr+"["+wi+"b"+gr+"]"+wi+"ack"+gr+" ["+wi+"e"+gr+"]"+wi+"xit "+yl+"==>"+rd+"? "+gr)
          if bs in ['b','B','back','Back','BACK']:
-            sy("clear && python HexTex.py")
+            sy("cls && python HexTex.py || clear && python HexTex.py")
          else:
             print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
             se(1.5)
@@ -205,7 +205,7 @@ def HexTex():
          while bs =="" or bs not in ['b','B','back','Back','BACK','e','E','exit','Exit','EXIT']:
              bs = raw_input(gr+"["+wi+"b"+gr+"]"+wi+"ack"+gr+" ["+wi+"e"+gr+"]"+wi+"xit "+yl+"==>"+rd+"? "+gr)
          if bs in ['b','B','back','Back','BACK']:
-            sy("clear && python HexTex.py")
+            sy("cls && python HexTex.py || clear && python HexTex.py")
          else:
             print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
             se(1.5)
