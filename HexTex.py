@@ -11,28 +11,17 @@ from time import sleep as se
 from os import system as sy
 from random import choice as cho
 from datetime import datetime
-from sys import platform as useros
 
-if useros =="linux" or useros =="linux2":
-####Colors Linux###########
- wi = "\033[1;37m" ##>>White
- rd = "\033[1;31m" ##>Red
- gr = "\033[1;32m" ##>Green
- yl = "\033[1;33m" ##>Yallow
- bl = "\033[1;34m" ##>Blou
- pu = "\033[1;35m" ##>Purple
- cy = "\033[1;36m" ##>Cyan
-#####################
-else:
-##No Colors##
- wi = ""   ##
- rd = ""   ##
- gr = ""   ##
- yl = ""   ##
- bl = ""   ##
- pu = ""   ##
- cy = ""   ##
-#############
+####Colors##########
+wi = '\033[1;37m' ##>>White
+rd = '\033[1;31m' ##>Red
+gr = '\033[1;32m' ##>Green
+yl = '\033[1;33m' ##>Yallow
+bl = '\033[1;34m' ##>Blou
+pu = '\033[1;35m' ##>Purple
+cy = '\033[1;36m' ##>Cyan
+####################
+
   
 ## Random Say
 say = ["GoodBye", "See You Later", "Have A Nice Day"]
@@ -212,11 +201,13 @@ def HexTex():
             print(gr+"[*] "+rd+randsay+gr+":)\n"+wi)
 
      elif ch =="5":
+         
 	print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
 	se(1.5)
 	print(gr+"[*] "+rd+randsay+gr+":)\n"+wi)
 
   except KeyboardInterrupt:
+      
 	print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
 	se(1.5)
 	print(gr+"[*] "+rd+randsay+gr+":)\n"+wi)
@@ -232,4 +223,3 @@ HexTex()
 ## This Script By Oseid Aldary ######
 ## Have A Nice Day, GoodBye :) ######
 #####################################>>Thanks For Using My Simple Script ..Bye :)
-
