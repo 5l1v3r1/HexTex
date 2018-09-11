@@ -86,7 +86,7 @@ def HexTex():
 	while bs =="" or bs not in ['b','B','back','Back','BACK','e','E','exit','Exit','EXIT']:
 	    bs = raw_input(gr+"["+wi+"b"+gr+"]"+wi+"ack"+gr+" ["+wi+"e"+gr+"]"+wi+"xit "+yl+"==>"+rd+"? "+gr)
 	if bs in ['b','B','back','Back','BACK']:
-            sy("cls && python HexTex.py || clear && python HexTex.py")
+            sy("cls && HexTex.py || clear && python HexTex.py")
 	else:
             print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
             se(1.5)
@@ -102,21 +102,30 @@ def HexTex():
         se(1)
         try:
            text = hex.decode('hex','strict')
+	   print(cy+"[H]"+pu+" Hex=[ "+yl+str(hex)+pu+" ] Text=[ "+yl+str(text)+pu+" ]...."+rd+"Done"+gr+" :)")
+           bs = raw_input(gr+"\n["+wi+"b"+gr+"]"+wi+"ack "+gr+"["+wi+"e"+gr+"]"+wi+"xit "+cy+"==> "+gr)
+           while bs =="" or bs not in ['b','B','back','Back','BACK','e','E','exit','Exit','EXIT']:
+              bs = raw_input(gr+"["+wi+"b"+gr+"]"+wi+"ack"+gr+" ["+wi+"e"+gr+"]"+wi+"xit "+yl+"==>"+rd+"? "+gr)
+           if bs in ['b','B','back','Back','BACK']:
+             sy("cls && HexTex.py || clear && python HexTex.py")
+           else:
+              print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
+              se(1.5)
+              print(gr+"[*] "+rd+randsay+gr+":)\n"+wi)
+              exit(1)
         except:
               print(rd+"["+yl+"!"+rd+"]["+yl+"ERROR"+rd+"]"+yl+" This["+rd+hex.strip()+yl+"] Is Not A Hex Code"+rd+" !!!")
-	      exit(1)
-        print(" ")
-        print(cy+"[H]"+pu+" Hex=[ "+yl+str(hex)+pu+" ] Text=[ "+yl+str(text)+pu+" ]...."+rd+"Done"+gr+" :)")
-        bs = raw_input(gr+"\n["+wi+"b"+gr+"]"+wi+"ack "+gr+"["+wi+"e"+gr+"]"+wi+"xit "+cy+"==> "+gr)
-        while bs =="" or bs not in ['b','B','back','Back','BACK','e','E','exit','Exit','EXIT']:
-            bs = raw_input(gr+"["+wi+"b"+gr+"]"+wi+"ack"+gr+" ["+wi+"e"+gr+"]"+wi+"xit "+yl+"==>"+rd+"? "+gr)
-        if bs in ['b','B','back','Back','BACK']:
-            sy("cls && python HexTex.py || clear && python HexTex.py")
-        else:
-            print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
-            se(1.5)
-            print(gr+"[*] "+rd+randsay+gr+":)\n"+wi)
-
+              bs = raw_input(gr+"\n["+wi+"b"+gr+"]"+wi+"ack "+gr+"["+wi+"e"+gr+"]"+wi+"xit "+cy+"==> "+gr)
+              while bs =="" or bs not in ['b','B','back','Back','BACK','e','E','exit','Exit','EXIT']:
+                bs = raw_input(gr+"["+wi+"b"+gr+"]"+wi+"ack"+gr+" ["+wi+"e"+gr+"]"+wi+"xit "+yl+"==>"+rd+"? "+gr)
+              if bs in ['b','B','back','Back','BACK']:
+                  sy("cls && HexTex.py || clear && python HexTex.py")
+              elif bs in ["e","E","exit","Exit","EXIT"]:
+                  print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
+                  se(1.5)
+                  print(gr+"[*] "+rd+randsay+gr+":)\n"+wi)
+                  pass
+            
      elif ch =="3":
 	 se(0.10)
 	 tf = raw_input(pu+"\n[TF]"+rd+"["+gr+"TextFile"+rd+"]"+cy+":> "+yl)
@@ -126,7 +135,7 @@ def HexTex():
 	    textfile = open(tf, "r")
 	 except:
 	    print(rd+"[!][ERROR]"+pu+" TextFile"+yl+"[ "+str(tf)+" ]"+pu+" Is Not Found"+rd+" !!!\n"+yl+"[#]"+pu+" Check Your File Location"+gr+" And Try Again :)")
-	    exit(1)
+	    exit()
 
 	 textfile = open(tf,"r").readlines()
 	 se(0.20)
@@ -151,11 +160,12 @@ def HexTex():
          while bs =="" or bs not in ['b','B','back','Back','BACK','e','E','exit','Exit','EXIT']:
              bs = raw_input(gr+"["+wi+"b"+gr+"]"+wi+"ack"+gr+" ["+wi+"e"+gr+"]"+wi+"xit "+yl+"==>"+rd+"? "+gr)
          if bs in ['b','B','back','Back','BACK']:
-            sy("cls && python HexTex.py || clear && python HexTex.py")
+            sy("cls && HexTex.py || clear && python HexTex.py")
          else:
             print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
             se(1.5)
             print(gr+"[*] "+rd+randsay+gr+":)\n"+wi)
+            exit(1)
 
      elif ch =="4":
 	 se(0.10)
@@ -166,7 +176,7 @@ def HexTex():
 	    hextfile = open(hf, "r")
 	 except:
 	    print(rd+"[!][ERROR]"+pu+" HexFile"+yl+"[ "+str(hf)+" ]"+pu+" Is Not Found"+rd+" !!!\n"+yl+"[#]"+pu+" Check Your File Location"+gr+" And Try Again :)")
-	    exit(1)
+	    exit()
 
 	 hexfile = open(hf,"r").readlines()
 	 se(0.20)
@@ -194,30 +204,38 @@ def HexTex():
          while bs =="" or bs not in ['b','B','back','Back','BACK','e','E','exit','Exit','EXIT']:
              bs = raw_input(gr+"["+wi+"b"+gr+"]"+wi+"ack"+gr+" ["+wi+"e"+gr+"]"+wi+"xit "+yl+"==>"+rd+"? "+gr)
          if bs in ['b','B','back','Back','BACK']:
-            sy("cls && python HexTex.py || clear && python HexTex.py")
+            sy("cls && HexTex.py || clear && python HexTex.py")
          else:
+           
             print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
             se(1.5)
             print(gr+"[*] "+rd+randsay+gr+":)\n"+wi)
+            exit(1)
 
      elif ch =="5":
          
 	print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
 	se(1.5)
 	print(gr+"[*] "+rd+randsay+gr+":)\n"+wi)
+	exit(1)
 
   except KeyboardInterrupt:
       
 	print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
 	se(1.5)
 	print(gr+"[*] "+rd+randsay+gr+":)\n"+wi)
+	exit(1)
+	
+  except EOFError:
+	print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
+	se(1.5)
+	print(gr+"[*] "+rd+randsay+gr+":)\n"+wi)
+	exit(1)
 
 ## HexTex Function Done !:)
 
 ## Run HexTex Function
-
 HexTex()
-
 #####################################
 ## End Of File ######################
 ## This Script By Oseid Aldary ######
