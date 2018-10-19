@@ -11,6 +11,7 @@ from time import sleep as se
 from os import system as sy
 from random import choice as cho
 from datetime import datetime
+from sys import platform as userOS
 
 ####Colors##########
 wi = '\033[1;37m' ##>>White
@@ -34,6 +35,13 @@ minute = now.minute
 second = now.second
 timenow = "{}:{}:{}".format(hour,minute,second)
 
+## back To Main Menu ##
+def back():
+  if userOS =="win32":
+    sy("cls && HexTex.py")
+  else:
+    sy("clear && python HexTex.py")
+  
 ## HEXTEX Function
 def HexTex():
 
@@ -86,7 +94,7 @@ def HexTex():
 	while bs =="" or bs not in ['b','B','back','Back','BACK','e','E','exit','Exit','EXIT']:
 	    bs = raw_input(gr+"["+wi+"b"+gr+"]"+wi+"ack"+gr+" ["+wi+"e"+gr+"]"+wi+"xit "+yl+"==>"+rd+"? "+gr)
 	if bs in ['b','B','back','Back','BACK']:
-            sy("cls && HexTex.py || clear && python HexTex.py")
+            back()
 	else:
             print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
             se(1.5)
@@ -107,7 +115,7 @@ def HexTex():
            while bs =="" or bs not in ['b','B','back','Back','BACK','e','E','exit','Exit','EXIT']:
               bs = raw_input(gr+"["+wi+"b"+gr+"]"+wi+"ack"+gr+" ["+wi+"e"+gr+"]"+wi+"xit "+yl+"==>"+rd+"? "+gr)
            if bs in ['b','B','back','Back','BACK']:
-             sy("cls && HexTex.py || clear && python HexTex.py")
+             back()
            else:
               print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
               se(1.5)
@@ -119,7 +127,7 @@ def HexTex():
               while bs =="" or bs not in ['b','B','back','Back','BACK','e','E','exit','Exit','EXIT']:
                 bs = raw_input(gr+"["+wi+"b"+gr+"]"+wi+"ack"+gr+" ["+wi+"e"+gr+"]"+wi+"xit "+yl+"==>"+rd+"? "+gr)
               if bs in ['b','B','back','Back','BACK']:
-                  sy("cls && HexTex.py || clear && python HexTex.py")
+                  back()
               elif bs in ["e","E","exit","Exit","EXIT"]:
                   print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
                   se(1.5)
@@ -160,7 +168,7 @@ def HexTex():
          while bs =="" or bs not in ['b','B','back','Back','BACK','e','E','exit','Exit','EXIT']:
              bs = raw_input(gr+"["+wi+"b"+gr+"]"+wi+"ack"+gr+" ["+wi+"e"+gr+"]"+wi+"xit "+yl+"==>"+rd+"? "+gr)
          if bs in ['b','B','back','Back','BACK']:
-            sy("cls && HexTex.py || clear && python HexTex.py")
+            back()
          else:
             print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
             se(1.5)
@@ -204,7 +212,7 @@ def HexTex():
          while bs =="" or bs not in ['b','B','back','Back','BACK','e','E','exit','Exit','EXIT']:
              bs = raw_input(gr+"["+wi+"b"+gr+"]"+wi+"ack"+gr+" ["+wi+"e"+gr+"]"+wi+"xit "+yl+"==>"+rd+"? "+gr)
          if bs in ['b','B','back','Back','BACK']:
-            sy("cls && HexTex.py || clear && python HexTex.py")
+            back()
          else:
            
             print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
@@ -220,24 +228,26 @@ def HexTex():
 	exit(1)
 
   except KeyboardInterrupt:
-      
-	print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
-	se(1.5)
-	print(gr+"[*] "+rd+randsay+gr+":)\n"+wi)
-	exit(1)
+    print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
+    se(1.5)
+    print(gr+"[*] "+rd+randsay+gr+":)\n"+wi)
+    exit(1)
 	
   except EOFError:
-	print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
-	se(1.5)
-	print(gr+"[*] "+rd+randsay+gr+":)\n"+wi)
-	exit(1)
+    print(rd+"\n\n[E]"+yl+" Exiting"+rd+"....\n")
+    se(1)
+    print(gr+"[*] "+rd+randsay+gr+":)\n"+wi)
+    exit(1)
 
 ## HexTex Function Done !:)
 
 ## Run HexTex Function
-
-HexTex()
-
+try:
+  HexTex()
+except KeyboardInterrupt:
+  se(1.5)
+  print(gr+"[*] "+rd+randsay+gr+":)\n"+wi)
+  exit(1)
 #####################################
 ## End Of File ######################
 ## This Script By Oseid Aldary ######
